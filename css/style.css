@@ -81,6 +81,28 @@ a, a:hover {
   z-index: -1;
   height: 400px;
 }
+/* العنوان الرئيسي */
+.main-title {
+  font-size: 72px; /* على الكمبيوتر */
+  font-weight: bold;
+}
+
+.main-subtitle {
+  font-size: 28px;
+  line-height: 1.8em;
+  color: #444;
+}
+
+/* شاشات الهواتف */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 36px; /* يصغر في الهاتف */
+  }
+  .main-subtitle {
+    font-size: 18px;
+    line-height: 1.6em;
+  }
+}
 
 @media (max-width: 991.98px) {
   .unslate_co--footer {
