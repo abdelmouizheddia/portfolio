@@ -1557,5 +1557,35 @@ span.error {
     line-height: 1.6 !important;
   }               
 
+/* العنوان الرئيسي */
+.main-title {
+  font-size: 60px;        /* حجم كبير للـ PC */
+  font-weight: bold;
+}
+
+.main-subtitle {
+  font-size: 22px;        /* حجم النص العادي */
+  line-height: 1.6;
+}
+
+/* للشاشات المتوسطة (تابلات) */
+@media (max-width: 992px) {
+  .main-title {
+    font-size: 45px;
+  }
+  .main-subtitle {
+    font-size: 18px;
+  }
+}
+
+/* للشاشات الصغيرة (موبايل) */
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 32px;
+  }
+  .main-subtitle {
+    font-size: 16px;
+  }
+}
 
 
