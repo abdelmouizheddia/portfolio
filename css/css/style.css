@@ -1512,3 +1512,50 @@ span.error {
     height: 100%;
     border: 1px solid red;
     background: #000; }
+
+
+    /* تقليل حجم النص في الهيرو/الواجهة */
+.hero .lead,
+.hero p,
+.about-me .lead,
+.about-me p {
+  font-size: 18px !important;  /* حجم مريح للنص */
+  line-height: 1.6 !important; /* مسافة مريحة بين الأسطر */
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* للشاشات الصغيرة (موبايل) */
+@media (max-width: 768px) {
+  .hero .lead,
+  .hero p,
+  .about-me .lead,
+  .about-me p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+}
+/* للشاشات المتوسطة (تابلت) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero .lead,    
+  .hero p,
+  .about-me .lead,
+  .about-me p {             
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+}
+/* للشاشات الكبيرة (ديسكتوب) */
+@media (min-width: 1025px) {     
+  .hero .lead,
+  .hero p,
+  .about-me .lead,
+  .about-me p {
+
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }               
+
+
+
