@@ -93,6 +93,27 @@ a {
     background-color: #fff;
     color: #000; }
 
+
+    /* ضبط حجم الفقرة داخل about section */
+.about-me p,
+.lead {
+  font-size: 18px;       /* قلل الحجم (الافتراضي كان غالبا 22px أو أكبر) */
+  line-height: 1.6;      /* يضمن مسافات مريحة بين الأسطر */
+  max-width: 800px;      /* يخلي النص ما يمدش على العرض كامل */
+  margin: 0 auto 20px;   /* يخلي النص في الوسط مع مسافة تحت */
+  text-align: center;    /* يخلي النص متوازن في الوسط */
+}
+
+
+@media (max-width: 768px) {
+  .about-me p,
+  .lead {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+
 #unslate_co--overlayer {
   width: 100%;
   height: 100%;
@@ -142,7 +163,7 @@ a {
     color: #fff;
     font-weight: 700; }
     .unslate_co--site-nav .unslate_co--site-logo span {
-      color: ##a8fd02; }
+      color: #a8fd02; }
   .unslate_co--site-nav .site-nav-ul, .unslate_co--site-nav .site-nav-ul-none-onepage {
     text-align: center; }
     .unslate_co--site-nav .site-nav-ul, .unslate_co--site-nav .site-nav-ul > li, .unslate_co--site-nav .site-nav-ul-none-onepage, .unslate_co--site-nav .site-nav-ul-none-onepage > li {
@@ -381,11 +402,11 @@ a {
           display: block;
           color: #000; }
           .unslate_co--site-nav.scrolled .site-nav-ul > li > a:hover, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:hover {
-            color: ##a8fd02; }
+            color: #a8fd02; }
           .unslate_co--site-nav.scrolled .site-nav-ul > li > a:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:before {
             background: #fff; }
           .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active {
-            color: ##a8fd02; }
+            color: #a8fd02; }
             .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active:before {
               background: #fff; }
     .unslate_co--site-nav.scrolled.awake {
