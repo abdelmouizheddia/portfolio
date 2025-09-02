@@ -85,21 +85,38 @@
 
   </head>
 
-  <p style="font-size:18px; font-weight:bold;">
-  👀 عدد الزوار: <span id="visitor-count">0</span>
-</p>
+  <div id="visitor-counter">
+  👀 <span id="visits"></span> Visitors
+</div>
 
 <script>
-  // كل مرة واحد يدخل للموقع يزيد العداد
-  const counterUrl = "https://api.countapi.xyz/hit/abdelmouizheddia.github.io/visits";
-
-  fetch(counterUrl)
+  // استدعاء API لحساب الزوار
+  fetch('https://api.countapi.xyz/hit/abdelmouizheddia.github.io/portfolio')
     .then(res => res.json())
     .then(res => {
-      document.getElementById("visitor-count").innerText = res.value;
-    })
-    .catch(err => console.error("خطأ في العداد:", err));
+      document.getElementById('visits').textContent = res.value;
+    });
 </script>
+
+<style>
+  #visitor-counter {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: inline-block;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  #visitor-counter span {
+    font-weight: bold;
+    color: #000;
+  }
+</style>
 
   <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
