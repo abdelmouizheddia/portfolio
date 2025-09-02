@@ -85,39 +85,7 @@
 
   </head>
 
-  <div id="visitor-counter">
-  👀 <span id="visits"></span> Visitors
-</div>
-
-<script>
-  // استدعاء API لحساب الزوار
-  fetch('https://api.countapi.xyz/hit/abdelmouizheddia.github.io/portfolio')
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById('visits').textContent = res.value;
-    });
-</script>
-
-<style>
-  #visitor-counter {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-    padding: 6px 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    display: inline-block;
-    background: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-  #visitor-counter span {
-    font-weight: bold;
-    color: #000;
-  }
-</style>
-
+  
   <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
     <nav class="unslate_co--site-mobile-menu">
@@ -882,6 +850,23 @@ As a self-employed professional, I also manage social media pages, handle databa
 
     <script src="js/scripts-dist.js"></script>
     <script src="js/main.js"></script>
+
+
+    <footer style="text-align:center; padding:15px; background:#111; color:#fff; font-family:Arial, sans-serif; font-size:14px;">
+  <div>
+    © 2025 Abdelmouiz Heddia | All Rights Reserved
+  </div>
+  <div id="visitor-counter" style="margin-top:8px;">
+    👁️ Visitors: <span id="visits"></span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/countapi-js"></script>
+<script>
+  countapi.visits("abdelmouizheddia.github.io/portfolio").then((result) => {
+    document.getElementById("visits").innerText = result.value;
+  });
+</script>
 
   </body>
 </html>
