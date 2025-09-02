@@ -84,6 +84,54 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
+
+  <div class="visitor-counter">
+  <span class="icon">👥</span>
+  <span>عدد الزوار:</span>
+  <span id="visits" class="count">0</span>
+</div>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/abdelmouizheddia-portfolio/visits')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('visits').textContent = data.value;
+    });
+</script>
+
+<style>
+.visitor-counter {
+  margin: 30px auto;
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: fit-content;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.visitor-counter:hover {
+  background: #eef3f7;
+  transform: scale(1.05);
+}
+.visitor-counter .icon {
+  font-size: 22px;
+}
+.visitor-counter .count {
+  font-weight: bold;
+  color: #0077b6;
+  font-size: 20px;
+}
+</style>
+
+  <body class="unslate_co--site" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-aos-once="true">  
+    
   <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
     <nav class="unslate_co--site-mobile-menu">
@@ -491,7 +539,7 @@ As a self-employed professional, I also manage social media pages, handle databa
                   </a>
               </div>
 
-              
+
             <div id="posts" class="row gutter-isotope-item">
               <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="images/work_1_full.jpg" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
